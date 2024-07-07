@@ -1,3 +1,11 @@
+<script>
+	export let data;
+</script>
+
 <main>
-    <a href="/2024/dreamhack-dallas">Dreamhack Dallas</a>
+	<ul>
+		{#each data.events as { name, slug }}
+			<li><a href={slug}>{name}</a></li>
+		{/each}
+	</ul>
 </main>

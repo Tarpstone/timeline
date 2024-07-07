@@ -1,3 +1,7 @@
+<script>
+	export let data;
+</script>
+
 <main>
 	<section>
 		<header>
@@ -5,18 +9,14 @@
 		</header>
 
 		<ul>
-            <a href="/2023">
-			<li class="year-link">
-                <span class="year-number">2023</span>
-                <span>PAX East, other stuff, just listing words here to test how the page looks really, sup people</span>
-            </li>
-        </a>
-        <a href="/2024">
-			<li class="year-link">
-                <span class="year-number">2024</span>
-                <span>PAX East, Dreamhack Dallas, here's some more words</span>
-            </li>
-        </a>
+			{#each data.years as { year, summary }}
+				<a href={year}>
+					<li class="year-link">
+						<span class="year-number">{year}</span>
+						<span>{summary}</span>
+					</li>
+				</a>
+			{/each}
 		</ul>
 	</section>
 </main>
@@ -29,13 +29,13 @@
 		max-width: 800px;
 	}
 
-    .year-link {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-    }
+	.year-link {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
 
-    .year-number {
-        align-self: center;
-        justify-self: center;
-    }
+	.year-number {
+		align-self: center;
+		justify-self: center;
+	}
 </style>
