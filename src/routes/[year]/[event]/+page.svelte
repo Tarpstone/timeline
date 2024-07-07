@@ -1,13 +1,12 @@
 <script>
-	import baseball from '$lib/albums/2024/dreamhack-dallas/baseball.webp';
+	import NavHeader from '$lib/components/NavHeader.svelte';
+
 	export let data;
 </script>
 
 <main>
 	<section>
-		<header>
-			<h1>2024 // dreamhack dallas</h1>
-		</header>
+		<NavHeader year={data.year} event={data.event} />
 		<div class="album-grid">
 			{#each data.images as { href, enhancedSrc, altText }}
 				<a {href}><enhanced:img class="album-grid-img" src={enhancedSrc} alt={altText} /></a>

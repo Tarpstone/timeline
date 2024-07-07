@@ -2,7 +2,7 @@
  * Schema and data for the site.
  */
 
-import { get_full } from './images';
+import { getFull, type Image } from './images';
 
 interface YearSummary {
 	year: string;
@@ -24,6 +24,12 @@ interface EventImages {
 	altText: string;
 }
 
+export interface EnhancedImageData {
+	href: string;
+	enhancedSrc: Image;
+	altText: string;
+}
+
 export const years: YearSummary[] = [
 	{
 		year: '2023',
@@ -41,14 +47,26 @@ export const eventsDB: EventsDB = {
 		'pax-east': {
 			slug: 'pax-east',
 			name: 'PAX East',
-			images: []
+			images: [
+				{
+					slug: 'ddr',
+					altText:
+						'Mike Tarpey holding a rainbow-colored Dance Dance Revolution arrow pillow made by Maiden And The Machine.'
+				}
+			]
 		}
 	},
 	'2024': {
 		'pax-east': {
 			slug: 'pax-east',
 			name: 'PAX East',
-			images: []
+			images: [
+				{
+					slug: 'ddr',
+					altText:
+						'Mike Tarpey holding a rainbow-colored Dance Dance Revolution arrow pillow made by Maiden And The Machine.'
+				}
+			]
 		},
 		'dreamhack-dallas': {
 			slug: 'dreamhack-dallas',
@@ -84,16 +102,24 @@ export const eventsDB: EventsDB = {
 	}
 };
 
-export function getEventsForYear(year: string) {
+/**
+ * Return the first listed image for a given event.
+ */
+export function getEventKeyImage(year: string, event: string): EnhancedImageData {
+	const enhancedImageData = getYearEventImages(year, event);
+	return enhancedImageData[0];
+}
+
+export function getEventsForYear(year: string): string[] {
 	return Object.keys(eventsDB[year]);
 }
 
-export function getYearEventImages(year: string, event: string) {
+export function getYearEventImages(year: string, event: string): EnhancedImageData[] {
 	const imageData = eventsDB[year][event]['images'];
 	return imageData.map((imageD: EventImages) => {
 		return {
 			href: `/${year}/${event}/${imageD.slug}`,
-			enhancedSrc: get_full(`/src/lib/albums/${year}/${event}/${imageD.slug}.webp`),
+			enhancedSrc: getFull(`/src/lib/albums/${year}/${event}/${imageD.slug}.webp`),
 			altText: imageD.altText
 		};
 	});

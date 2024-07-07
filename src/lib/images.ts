@@ -1,4 +1,4 @@
-type Image = {
+export type Image = {
 	sources: {
 		avif: string;
 		webp: string;
@@ -15,15 +15,6 @@ type ImageImport = {
 	default: Image;
 };
 
-// simply using dynamic paths for enhanced:img is broken.
-// shoutout kapitalisman for this workaround.
-// https://github.com/sveltejs/kit/discussions/11438
-export const imagesno = import.meta.glob<Image>('$lib/albums/**', {
-	query: { enhanced: true },
-	import: 'default',
-	eager: true
-});
-
 // round 2 since kapitalisman's fix didn't work either
 export const images = import.meta.glob<ImageImport>(['$lib/albums/**'], {
 	eager: true,
@@ -33,7 +24,6 @@ export const images = import.meta.glob<ImageImport>(['$lib/albums/**'], {
 	}
 });
 
-export function get_full(desired_image: string) {
-	console.log(images[desired_image].default);
-	return images[desired_image].default;
+export function getFull(desiredImage: string) {
+	return images[desiredImage].default;
 }
