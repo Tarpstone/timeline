@@ -5,7 +5,7 @@
 <main>
 	<ul>
 		{#each data.events as { name, slug }}
-			<li><a href={slug}>{name}</a></li>
+			<li><a href="{data.year}/{slug}">{name}</a></li>
 		{/each}
 	</ul>
 </main>

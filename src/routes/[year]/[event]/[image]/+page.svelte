@@ -5,7 +5,7 @@
 		</header>
 		<enhanced:img
 			class="hero-img"
-			src="$lib/images/albums/2024-dreamhack-dallas/baseball.webp"
+			src="$lib/albums/2024/dreamhack-dallas/baseball.webp"
 			sizes="max(800px, 100vw)"
 			alt="From left to right sitting in the stands at Truist Park in Atlanta, GA: Brandon, Mike Tarpey, Bryant."
 		/>

@@ -1,8 +1,3 @@
-# timeline
-
-[timeline.tarpey.dev](https://timeline.tarpey.dev)
-
-```typescript
 type Image = {
 	sources: {
 		avif: string
@@ -40,12 +35,3 @@ console.log(images);
 export function get_full(desired_image: string) {
     return images[desired_image].default;
 };
-```
-
-Starting to feel unloved. Time for Hugo. Huge green flag from their README:
-
-```
-Hugo's fast asset pipelines include:
-
-Image processing – Convert, resize, crop, rotate, adjust colors, apply filters, overlay text and images, and extract EXIF data
-```
