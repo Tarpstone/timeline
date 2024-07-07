@@ -2,13 +2,15 @@
  * Schema and data for the site.
  */
 
+import { get_full } from './images';
+
 interface YearSummary {
 	year: string;
 	summary: string;
 }
 
 interface EventsDB {
-	[key: string]: YearEvent[];
+	[key: string]: Record<string, YearEvent>;
 }
 
 interface YearEvent {
@@ -35,20 +37,20 @@ export const years: YearSummary[] = [
 ];
 
 export const eventsDB: EventsDB = {
-	'2023': [
-		{
+	'2023': {
+		'pax-east': {
 			slug: 'pax-east',
 			name: 'PAX East',
 			images: []
 		}
-	],
-	'2024': [
-		{
+	},
+	'2024': {
+		'pax-east': {
 			slug: 'pax-east',
 			name: 'PAX East',
 			images: []
 		},
-		{
+		'dreamhack-dallas': {
 			slug: 'dreamhack-dallas',
 			name: 'Dreamhack Dallas',
 			images: [
@@ -79,5 +81,20 @@ export const eventsDB: EventsDB = {
 				}
 			]
 		}
-	]
+	}
 };
+
+export function getEventsForYear(year: string) {
+	return Object.keys(eventsDB[year]);
+}
+
+export function getYearEventImages(year: string, event: string) {
+	const imageData = eventsDB[year][event]['images'];
+	return imageData.map((imageD: EventImages) => {
+		return {
+			href: `/${year}/${event}/${imageD.slug}`,
+			enhancedSrc: get_full(`/src/lib/albums/${year}/${event}/${imageD.slug}.webp`),
+			altText: imageD.altText
+		};
+	});
+}
