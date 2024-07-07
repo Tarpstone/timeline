@@ -1,55 +1,41 @@
 <main>
-    <header>
-        <h1>2024</h1>
-    </header>
-    <section>
-        <header>
-            <h2>dreamhack dallas</h2>
-        </header>
-        <div class="album-grid">
-            <enhanced:img
-                class="album-grid-img"
-                src="$lib/images/albums/2024-dreamhack-dallas/baseball.webp"
-                alt="From left to right sitting in the stands at Truist Park in Atlanta, GA: Brandon, Mike Tarpey, Bryant."
-            />
-            <enhanced:img
-                class="album-grid-img"
-                src="$lib/images/albums/2024-dreamhack-dallas/ddr.webp"
-                alt="Pictured on the left is James Banks, the premier player interviewer and stage hype-man in Counter-Strike esports. Pictured on the right is Mike Tarpey, owner of this website (tarpey.dev)."
-            />
-            <enhanced:img
-                class="album-grid-img"
-                src="$lib/images/albums/2024-dreamhack-dallas/banks.webp"
-                alt="Pictured on the left is James Banks, the premier player interviewer and stage hype-man in Counter-Strike esports. Pictured on the right is Mike Tarpey, owner of this website (tarpey.dev)."
-            />
-            <enhanced:img
-                class="album-grid-img"
-                src="$lib/images/albums/2024-dreamhack-dallas/kaelaris.webp"
-                alt="Pictured on the left is James Banks, the premier player interviewer and stage hype-man in Counter-Strike esports. Pictured on the right is Mike Tarpey, owner of this website (tarpey.dev)."
-            />
-            <enhanced:img
-                class="album-grid-img"
-                src="$lib/images/albums/2024-dreamhack-dallas/gstew.webp"
-                alt="Pictured on the left is James Banks, the premier player interviewer and stage hype-man in Counter-Strike esports. Pictured on the right is Mike Tarpey, owner of this website (tarpey.dev)."
-            />
-        </div>
-    </section>
+	<section>
+		<header>
+			<h1>timeline</h1>
+		</header>
 
+		<ul>
+            <a href="/2023">
+			<li class="year-link">
+                <span class="year-number">2023</span>
+                <span>PAX East, other stuff, just listing words here to test how the page looks really, sup people</span>
+            </li>
+        </a>
+        <a href="/2024">
+			<li class="year-link">
+                <span class="year-number">2024</span>
+                <span>PAX East, Dreamhack Dallas, here's some more words</span>
+            </li>
+        </a>
+		</ul>
+	</section>
 </main>
+<footer>
+	<a href="/about">about</a>
+</footer>
 
 <style>
-    main {
-        max-width: 800px;
+	main {
+		max-width: 800px;
+	}
+
+    .year-link {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
     }
 
-    .album-grid {
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    .album-grid-img {
-        height: 200px;
-        width: 200px;
-        object-fit: cover;
+    .year-number {
+        align-self: center;
+        justify-self: center;
     }
 </style>
