@@ -16,15 +16,19 @@ interface EventsDB {
 interface YearEvent {
 	slug: string;
 	name: string;
-	images: EventImages[];
+	images: EventImage[];
 }
 
-interface EventImages {
+interface EventImage {
 	slug: string;
 	altText: string;
 }
 
 export interface EnhancedImageData {
+	year: string;
+	eventSlug: string;
+	eventName: string;
+	imageSlug: string;
 	href: string;
 	enhancedSrc: Image;
 	altText: string;
@@ -50,8 +54,7 @@ export const eventsDB: EventsDB = {
 			images: [
 				{
 					slug: 'cape-cod',
-					altText:
-						'cape-cod'
+					altText: 'cape-cod'
 				},
 				{
 					slug: 'sparta',
@@ -67,12 +70,11 @@ export const eventsDB: EventsDB = {
 			images: [
 				{
 					slug: 'baby-girl',
-					altText: 'baby-girl',
+					altText: 'baby-girl'
 				},
 				{
 					slug: 'cafeteria',
-					altText:
-						'cafeteria'
+					altText: 'cafeteria'
 				}
 			]
 		},
@@ -113,28 +115,55 @@ export const eventsDB: EventsDB = {
 /**
  * Return the first listed image for a given event.
  */
-export function getEventKeyImage(year: string, event: string): EnhancedImageData {
-	const enhancedImageData = getYearEventImages(year, event);
+export function getEventKeyImage(year: string, eventSlug: string): EnhancedImageData {
+	const enhancedImageData = getYearEventImages(year, eventSlug);
 	return enhancedImageData[0];
 }
 
-export function getEventImageByName(year: string, event: string, slug: string): EnhancedImageData {
-	const enhancedImageData = getYearEventImages(year, event);
+export function getEventImageByName(year: string, eventSlug: string, imageSlug: string): EnhancedImageData {
+	const enhancedImageData = getYearEventImages(year, eventSlug);
 	// TODO error handling here
-	return enhancedImageData.find((image) => image.href === `/${year}/${event}/${slug}`)!;
+	return enhancedImageData.find((image) => image.href === `/${year}/${eventSlug}/${imageSlug}`)!;
 }
 
-export function getEventsForYear(year: string): string[] {
+export function getEventSlugsForYear(year: string): string[] {
 	return Object.keys(eventsDB[year]);
 }
 
-export function getYearEventImages(year: string, event: string): EnhancedImageData[] {
-	const imageData = eventsDB[year][event]['images'];
-	return imageData.map((imageD: EventImages) => {
-		return {
-			href: `/${year}/${event}/${imageD.slug}`,
-			enhancedSrc: getFull(`/src/lib/albums/${year}/${event}/${imageD.slug}.webp`),
-			altText: imageD.altText
-		};
+export function getEventNamesBySlugForYear(year: string): Record<string, string> {
+	let eventSlugNameMap: Record<string, string> = {};
+	for (const [slug, event] of Object.entries(eventsDB[year])) {
+		eventSlugNameMap[slug] = event.name;
+	}
+	return eventSlugNameMap;
+}
+
+export function getYearKeyImages(year: string): EnhancedImageData[] {
+	const eventSlugs = getEventSlugsForYear(year);
+	return eventSlugs.map((eventSlug: string) => {
+		const imageData = eventsDB[year][eventSlug]['images'][0];
+		return transformToEnhancedImageData(year, eventSlug, imageData);
 	});
+}
+
+export function getYearEventImages(year: string, eventSlug: string): EnhancedImageData[] {
+	const imageData = eventsDB[year][eventSlug]['images'];
+	return imageData.map((imageData: EventImage) => transformToEnhancedImageData(year, eventSlug, imageData));
+}
+
+export function transformToEnhancedImageData(
+	year: string,
+	eventSlug: string,
+	image: EventImage
+): EnhancedImageData {
+	const eventSlugNameMap = getEventNamesBySlugForYear(year);
+	return {
+		year: year,
+		eventSlug: eventSlug,
+		eventName: eventSlugNameMap[eventSlug],
+		imageSlug: image.slug,
+		href: `/${year}/${eventSlug}/${image.slug}`,
+		enhancedSrc: getFull(`/src/lib/albums/${year}/${eventSlug}/${image.slug}.webp`),
+		altText: image.altText
+	};
 }
