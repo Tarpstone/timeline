@@ -7,16 +7,16 @@
 
 <header>
 	{#if about}
-	<h1>
-		<a href="/">timeline</a>/about
-	</h1>
+		<h1>
+			<a href="/">timeline</a>/about
+		</h1>
 	{:else}
-	<h1>
-		<a href="/">timeline</a>{#if year}/<a href="/{year}">{year}</a>{/if}{#if event}/<a
-				href="/{year}/{event}">{event}</a
-			>{/if}
-	</h1>
-	{#if image}<h6>{image}</h6>{/if}
+		<h1>
+			<a href="/">timeline</a>{#if year}/<a href="/{year}">{year}</a>{/if}{#if event}/<a
+					href="/{year}/{event}">{event}</a
+				>{/if}
+		</h1>
+		{#if image}<h6>{image}</h6>{/if}
 	{/if}
 </header>
 

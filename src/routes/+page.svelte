@@ -1,14 +1,14 @@
 <script>
 	import AboutFooter from '$lib/components/AboutFooter.svelte';
 	import NavHeader from '$lib/components/NavHeader.svelte';
-import YearSelect from '$lib/components/YearSelect.svelte';
+	import YearSelect from '$lib/components/YearSelect.svelte';
 
 	export let data;
 </script>
 
 <main>
 	<section>
-		<NavHeader/>
+		<NavHeader />
 		<ul>
 			{#each data.years as { year, summary }}
 				<YearSelect {year} {summary} />
@@ -16,7 +16,7 @@ import YearSelect from '$lib/components/YearSelect.svelte';
 		</ul>
 	</section>
 </main>
-<AboutFooter/>
+<AboutFooter home={true}/>
 
 <style>
 	main {

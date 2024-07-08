@@ -1,14 +1,8 @@
-import { eventsDB } from '$lib/db';
+import { getYearKeyImages, type EnhancedImageData } from '$lib/db';
 
 // load is a special function in Svelte. The return value is made available
 // to the neighboring page.svelte file
-export function load({ params }) {
-	const eventData = [];
-	for (const [slug, event] of Object.entries(eventsDB[params.year])) {
-		eventData.push({
-			slug: slug,
-			name: event.name
-		});
-	}
-	return { year: params.year, events: eventData };
+export function load({ params }): { year: string; images: EnhancedImageData[] } {
+	const imageData = getYearKeyImages(params.year);
+	return { year: params.year, images: imageData };
 }

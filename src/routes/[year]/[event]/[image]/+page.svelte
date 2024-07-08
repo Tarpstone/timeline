@@ -1,9 +1,9 @@
 <script>
-
-	import AboutFooter from "$lib/components/AboutFooter.svelte";
-	import NavHeader from "$lib/components/NavHeader.svelte";
+	import AboutFooter from '$lib/components/AboutFooter.svelte';
+	import NavHeader from '$lib/components/NavHeader.svelte';
 	export let data;
 </script>
+
 <main>
 	<section>
 		<NavHeader year={data.year} event={data.event} image={data.image} />
@@ -15,7 +15,7 @@
 		/>
 	</section>
 </main>
-<AboutFooter/>
+<AboutFooter />
 
 <style>
 	main {
