@@ -49,9 +49,13 @@ export const eventsDB: EventsDB = {
 			name: 'PAX East',
 			images: [
 				{
-					slug: 'ddr',
+					slug: 'cape-cod',
 					altText:
-						'Mike Tarpey holding a rainbow-colored Dance Dance Revolution arrow pillow made by Maiden And The Machine.'
+						'cape-cod'
+				},
+				{
+					slug: 'sparta',
+					altText: 'sparta'
 				}
 			]
 		}
@@ -62,9 +66,13 @@ export const eventsDB: EventsDB = {
 			name: 'PAX East',
 			images: [
 				{
-					slug: 'ddr',
+					slug: 'baby-girl',
+					altText: 'baby-girl',
+				},
+				{
+					slug: 'cafeteria',
 					altText:
-						'Mike Tarpey holding a rainbow-colored Dance Dance Revolution arrow pillow made by Maiden And The Machine.'
+						'cafeteria'
 				}
 			]
 		},
@@ -108,6 +116,12 @@ export const eventsDB: EventsDB = {
 export function getEventKeyImage(year: string, event: string): EnhancedImageData {
 	const enhancedImageData = getYearEventImages(year, event);
 	return enhancedImageData[0];
+}
+
+export function getEventImageByName(year: string, event: string, slug: string): EnhancedImageData {
+	const enhancedImageData = getYearEventImages(year, event);
+	// TODO error handling here
+	return enhancedImageData.find((image) => image.href === `/${year}/${event}/${slug}`)!;
 }
 
 export function getEventsForYear(year: string): string[] {

@@ -1,20 +1,29 @@
+<script>
+
+	import AboutFooter from "$lib/components/AboutFooter.svelte";
+	import NavHeader from "$lib/components/NavHeader.svelte";
+	export let data;
+</script>
 <main>
 	<section>
-		<header>
-			<h1>2024 // dreamhack dallas // baseball</h1>
-		</header>
+		<NavHeader year={data.year} event={data.event} image={data.image} />
 		<enhanced:img
 			class="hero-img"
-			src="$lib/albums/2024/dreamhack-dallas/baseball.webp"
+			src={data.imageData.enhancedSrc}
 			sizes="max(800px, 100vw)"
-			alt="From left to right sitting in the stands at Truist Park in Atlanta, GA: Brandon, Mike Tarpey, Bryant."
+			alt={data.imageData.altText}
 		/>
 	</section>
 </main>
+<AboutFooter/>
 
 <style>
 	main {
 		max-width: 800px;
+	}
+
+	section {
+		margin-bottom: 20px;
 	}
 
 	.hero-img {

@@ -1,4 +1,5 @@
 <script>
+	import AboutFooter from '$lib/components/AboutFooter.svelte';
 	import NavHeader from '$lib/components/NavHeader.svelte';
 
 	export let data;
@@ -14,10 +15,15 @@
 		</div>
 	</section>
 </main>
+<AboutFooter/>
 
 <style>
 	main {
 		max-width: 800px;
+	}
+
+	section {
+		margin-bottom: 20px;
 	}
 
 	.album-grid-img {

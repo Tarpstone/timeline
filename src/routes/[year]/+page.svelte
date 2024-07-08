@@ -1,4 +1,5 @@
 <script>
+	import AboutFooter from '$lib/components/AboutFooter.svelte';
 	import EventSelect from '$lib/components/EventSelect.svelte';
 	import NavHeader from '$lib/components/NavHeader.svelte';
 	export let data;
@@ -14,9 +15,10 @@
 		</ul>
 	</section>
 </main>
+<AboutFooter/>
 
 <style>
 	main {
-		width: 100vw;
+		max-width: 800px;
 	}
 </style>

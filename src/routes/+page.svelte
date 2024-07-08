@@ -1,15 +1,14 @@
 <script>
-	import YearSelect from '$lib/components/YearSelect.svelte';
+	import AboutFooter from '$lib/components/AboutFooter.svelte';
+	import NavHeader from '$lib/components/NavHeader.svelte';
+import YearSelect from '$lib/components/YearSelect.svelte';
 
 	export let data;
 </script>
 
 <main>
 	<section>
-		<header>
-			<h1>timeline</h1>
-		</header>
-
+		<NavHeader/>
 		<ul>
 			{#each data.years as { year, summary }}
 				<YearSelect {year} {summary} />
@@ -17,9 +16,7 @@
 		</ul>
 	</section>
 </main>
-<footer>
-	<a href="/about">about</a>
-</footer>
+<AboutFooter/>
 
 <style>
 	main {
