@@ -16,10 +16,20 @@
 		</ul>
 	</section>
 </main>
-<AboutFooter home={true}/>
+<AboutFooter home={true} />
 
 <style>
 	main {
 		max-width: 800px;
+	}
+
+	ul {
+		margin: 10px;
+	}
+
+	@media (max-width: 800px) {
+		ul {
+			margin: 10px 0 0 0;
+		}
 	}
 </style>

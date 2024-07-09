@@ -120,7 +120,11 @@ export function getEventKeyImage(year: string, eventSlug: string): EnhancedImage
 	return enhancedImageData[0];
 }
 
-export function getEventImageByName(year: string, eventSlug: string, imageSlug: string): EnhancedImageData {
+export function getEventImageByName(
+	year: string,
+	eventSlug: string,
+	imageSlug: string
+): EnhancedImageData {
 	const enhancedImageData = getYearEventImages(year, eventSlug);
 	// TODO error handling here
 	return enhancedImageData.find((image) => image.href === `/${year}/${eventSlug}/${imageSlug}`)!;
@@ -148,7 +152,9 @@ export function getYearKeyImages(year: string): EnhancedImageData[] {
 
 export function getYearEventImages(year: string, eventSlug: string): EnhancedImageData[] {
 	const imageData = eventsDB[year][eventSlug]['images'];
-	return imageData.map((imageData: EventImage) => transformToEnhancedImageData(year, eventSlug, imageData));
+	return imageData.map((imageData: EventImage) =>
+		transformToEnhancedImageData(year, eventSlug, imageData)
+	);
 }
 
 export function transformToEnhancedImageData(

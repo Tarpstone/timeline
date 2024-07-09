@@ -17,15 +17,4 @@
 	main {
 		max-width: 800px;
 	}
-
-	section {
-		margin-bottom: 20px;
-	}
-
-	@media (max-width: 800px) {
-		a {
-			width: 50vw;
-			height: 50vw;
-		}
-	}
 </style>

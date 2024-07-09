@@ -7,13 +7,23 @@
 
 <div class="polaroid-grid">
 	{#each images as image}
-		<Polaroid keyPhoto={keyPhotos} {image} />
+		<div class="polaroid-container"><Polaroid keyPhoto={keyPhotos} {image} /></div>
 	{/each}
 </div>
 
 <style>
 	.polaroid-grid {
-		display: flex;
-		flex-wrap: wrap;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
+
+	.polaroid-container {
+		margin: 10px;
+	}
+
+	@media (max-width: 800px) {
+		.polaroid-grid {
+			grid-template-columns: 50vw 50vw;
+		}
 	}
 </style>

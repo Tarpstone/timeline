@@ -1,7 +1,9 @@
 <script lang="ts">
 	import { type EnhancedImageData } from '../db';
+	import PolaroidWrapper from './PolaroidWrapper.svelte';
 	export let image: EnhancedImageData;
 	export let keyPhoto: boolean;
+	export let heroImage: boolean = false;
 	// figure out the href and name for this polaroid. if it's a key photo,
 	// it should link to the entire event. otherwise it should
 	// link to a specific image page (the full href field)
@@ -9,48 +11,46 @@
 	const polaroidName = keyPhoto ? image.eventName : image.imageSlug;
 </script>
 
-<a href={href}
-	>
-		<div class="event-name-div">
-		<span class="event-name">{polaroidName}</span></div><enhanced:img
-			class="album-grid-img"
-			src={image.enhancedSrc}
-			alt={image.altText}
-		/>
-
-	</a
->
-<!-- <a {href}><enhanced:img class="album-grid-img" src={image.enhancedSrc} alt={image.altText} /></a> -->
+<PolaroidWrapper href={heroImage ? '' : href}>
+	<div class="event-name-div">
+		<span class="event-name">{polaroidName}</span>
+	</div>
+	<div class="img-container">
+		<enhanced:img class="album-grid-img" src={image.enhancedSrc} alt={image.altText} sizes={heroImage ? "max(800px, 100vw)" : "max(400px, 50vw)"} />
+	</div>
+</PolaroidWrapper>
 
 <style>
-	@media (max-width: 800px) {
-		.album-grid-img {
-			width: 100%;
-			height: 100%;
-			object-fit: cover;
-		}
+	.img-container {
+		overflow: hidden;
 	}
 	.album-grid-img {
 		display: block;
 		object-fit: cover;
-		width: 400px;
-		height: 400px;
+		width: 100%;
+		height: 100%;
 	}
 
 	.event-name-div {
-		display: block;
+		display: flex;
 	}
 
 	.event-name {
+		color: #000000;
 		display: block;
-		text-align: center;
+		text-align: left;
 		align-self: center;
 		justify-self: center;
 	}
 
 	@media (max-width: 800px) {
 		.event-name {
-			margin-left: 20px;
+			font-size: 1.5rem;
+		}
+		.album-grid-img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
 		}
 	}
 </style>
