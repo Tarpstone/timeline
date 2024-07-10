@@ -1,11 +1,12 @@
 <script>
 	import AboutFooter from '$lib/components/AboutFooter.svelte';
 	import NavHeader from '$lib/components/NavHeader.svelte';
+	import Seo from '$lib/components/Seo.svelte';
 	import YearSelect from '$lib/components/YearSelect.svelte';
-
 	export let data;
 </script>
 
+<Seo />
 <main>
 	<section>
 		<NavHeader />

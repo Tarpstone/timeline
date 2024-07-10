@@ -15,7 +15,9 @@ type ImageImport = {
 	default: Image;
 };
 
-// round 2 since kapitalisman's fix didn't work either
+// inspired by the docs + a couple github solutions.
+// https://github.com/sveltejs/kit/discussions/11438
+// https://github.com/sveltejs/kit/issues/11535#issuecomment-2207645048
 export const images = import.meta.glob<ImageImport>(['$lib/albums/**'], {
 	eager: true,
 	query: {

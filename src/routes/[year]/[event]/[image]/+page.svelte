@@ -2,9 +2,17 @@
 	import AboutFooter from '$lib/components/AboutFooter.svelte';
 	import NavHeader from '$lib/components/NavHeader.svelte';
 	import Polaroid from '$lib/components/Polaroid.svelte';
+	import Seo from '$lib/components/Seo.svelte';
 	export let data;
 </script>
 
+<Seo
+	year={data.imageData.year}
+	eventSlug={data.imageData.eventSlug}
+	imageSlug={data.imageData.imageSlug}
+	imageUrl={data.imageData.enhancedSrc.img.src}
+	imageAltText={data.imageData.altText}
+/>
 <main>
 	<section>
 		<NavHeader year={data.imageData.year} event={data.imageData.eventSlug} />

@@ -4,6 +4,10 @@
 
 import { getFull, type Image } from './images';
 
+// main SEO image
+export const mainImageAltText =
+	'Cindy Tarpey in the early 90s, crouched down on the front lawn of her house in Central Florida, holding her toddler aged son Mike Tarpey (owner of this website). The shadows indicate high noon, and their blocky brown Chrysler minivan is in the background.';
+
 interface YearSummary {
 	year: string;
 	summary: string;
@@ -268,4 +272,14 @@ export function transformToEnhancedImageData(
 		enhancedSrc: getFull(`/src/lib/albums/${year}/${eventSlug}/${image.slug}.webp`),
 		altText: image.altText
 	};
+}
+
+/**
+ * Get a direct link to the build URL of a certain image.
+ * Useful for SEO (we need the built image file which includes
+ * an optimization hash that changes every build).
+ */
+export function getImageBuildPath(year: string, eventSlug: string, imageSlug: string): string {
+	const enhancedSrc = getFull(`/src/lib/albums/${year}/${eventSlug}/${imageSlug}.webp`);
+	return enhancedSrc.img.src;
 }

@@ -55,3 +55,5 @@ Also went to Next JS and remembered how unloved their Image component continues 
 finally found a good solution with the fix above + adding width to the custom query. Then it was polaroid time.
 
 TODO alt text below images, SEO, sepia color on hover, transition hover color
+
+Write about getting SEO working (just had to link to imagetools src!)
