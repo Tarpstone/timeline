@@ -49,3 +49,9 @@ Hugo's fast asset pipelines include:
 
 Image processing – Convert, resize, crop, rotate, adjust colors, apply filters, overlay text and images, and extract EXIF data
 ```
+
+Also went to Next JS and remembered how unloved their Image component continues to be...
+
+finally found a good solution with the fix above + adding width to the custom query. Then it was polaroid time.
+
+TODO alt text below images, SEO, sepia color on hover, transition hover color

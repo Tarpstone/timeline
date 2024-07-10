@@ -14,7 +14,7 @@ interface EventsDB {
 }
 
 interface YearEvent {
-	slug: string;
+	slug?: string;
 	name: string;
 	images: EventImage[];
 }
@@ -36,17 +36,96 @@ export interface EnhancedImageData {
 
 export const years: YearSummary[] = [
 	{
+		year: '2024',
+		summary: "PAX East, Dreamhack Dallas, here's some more words"
+	},
+	{
 		year: '2023',
 		summary:
 			'PAX East, other stuff, just listing words here to test how the page looks really, sup people'
 	},
+	// {
+	// 	year: '2022',
+	// 	summary: '',
+	// },
+	// {
+	// 	year: '2021',
+	// 	summary: '',
+	// },
+	// {
+	// 	year: '2020',
+	// 	summary: '',
+	// },
+	// {
+	// 	year: '2019',
+	// 	summary: '',
+	// },
+	// {
+	// 	year: '2018',
+	// 	summary: '',
+	// },
+	// {
+	// 	year: '2017',
+	// 	summary: '',
+	// },
+	// {
+	// 	year: '2016',
+	// 	summary: '',
+	// },
+	// {
+	// 	year: '2015',
+	// 	summary: '',
+	// },
+	// {
+	// 	year: '2014',
+	// 	summary: '',
+	// },
+	// {
+	// 	year: '2013',
+	// 	summary: '',
+	// },
 	{
-		year: '2024',
-		summary: "PAX East, Dreamhack Dallas, here's some more words"
+		year: '2012',
+		summary: 'Coke 600, world was supposed to end'
 	}
 ];
 
 export const eventsDB: EventsDB = {
+	'2012': {
+		'coke-600': {
+			name: 'Coke 600',
+			images: [
+				{
+					slug: 'pizza',
+					altText: ''
+				},
+				{
+					slug: 'rockstar',
+					altText: ''
+				},
+				{
+					slug: 'kasey',
+					altText: ''
+				},
+				{
+					slug: 'burnt',
+					altText: ''
+				},
+				{
+					slug: 'paraglider',
+					altText: ''
+				},
+				{
+					slug: 'high-line',
+					altText: ''
+				},
+				{
+					slug: 'winner',
+					altText: ''
+				}
+			]
+		}
+	},
 	'2023': {
 		'pax-east': {
 			slug: 'pax-east',
@@ -113,13 +192,43 @@ export const eventsDB: EventsDB = {
 };
 
 /**
- * Return the first listed image for a given event.
+ * Return a list of event slugs for a given year.
+ */
+export function getEventSlugsForYear(year: string): string[] {
+	return Object.keys(eventsDB[year]);
+}
+
+/**
+ * Return a list of event slug->name key values for a given year.
+ */
+export function getEventNamesBySlugForYear(year: string): Record<string, string> {
+	let eventSlugNameMap: Record<string, string> = {};
+	for (const [slug, event] of Object.entries(eventsDB[year])) {
+		eventSlugNameMap[slug] = event.name;
+	}
+	return eventSlugNameMap;
+}
+
+/**
+ * Return the last listed image for a given event,
+ * otherwise known as the "key image".
  */
 export function getEventKeyImage(year: string, eventSlug: string): EnhancedImageData {
 	const enhancedImageData = getYearEventImages(year, eventSlug);
-	return enhancedImageData[0];
+	return enhancedImageData[enhancedImageData.length - 1];
 }
 
+/**
+ * Return the key image for every event in a year.
+ */
+export function getYearKeyImages(year: string): EnhancedImageData[] {
+	const eventSlugs = getEventSlugsForYear(year);
+	return eventSlugs.map((eventSlug: string) => getEventKeyImage(year, eventSlug));
+}
+
+/**
+ * Return a single image given the entire image path.
+ */
 export function getEventImageByName(
 	year: string,
 	eventSlug: string,
@@ -130,26 +239,9 @@ export function getEventImageByName(
 	return enhancedImageData.find((image) => image.href === `/${year}/${eventSlug}/${imageSlug}`)!;
 }
 
-export function getEventSlugsForYear(year: string): string[] {
-	return Object.keys(eventsDB[year]);
-}
-
-export function getEventNamesBySlugForYear(year: string): Record<string, string> {
-	let eventSlugNameMap: Record<string, string> = {};
-	for (const [slug, event] of Object.entries(eventsDB[year])) {
-		eventSlugNameMap[slug] = event.name;
-	}
-	return eventSlugNameMap;
-}
-
-export function getYearKeyImages(year: string): EnhancedImageData[] {
-	const eventSlugs = getEventSlugsForYear(year);
-	return eventSlugs.map((eventSlug: string) => {
-		const imageData = eventsDB[year][eventSlug]['images'][0];
-		return transformToEnhancedImageData(year, eventSlug, imageData);
-	});
-}
-
+/**
+ * Return all of the images for a given year + event.
+ */
 export function getYearEventImages(year: string, eventSlug: string): EnhancedImageData[] {
 	const imageData = eventsDB[year][eventSlug]['images'];
 	return imageData.map((imageData: EventImage) =>
@@ -157,6 +249,10 @@ export function getYearEventImages(year: string, eventSlug: string): EnhancedIma
 	);
 }
 
+/**
+ * Take EventImage data and transform it to the EnhancedImageData
+ * required by Svelte's enhanced:img tag.
+ */
 export function transformToEnhancedImageData(
 	year: string,
 	eventSlug: string,

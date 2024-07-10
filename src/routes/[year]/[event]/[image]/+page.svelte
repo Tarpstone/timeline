@@ -8,7 +8,7 @@
 <main>
 	<section>
 		<NavHeader year={data.imageData.year} event={data.imageData.eventSlug} />
-		<Polaroid keyPhoto={false} heroImage={true} image={data.imageData}/>
+		<Polaroid keyPhoto={false} heroImage={true} image={data.imageData} />
 	</section>
 </main>
 <AboutFooter />
