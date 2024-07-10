@@ -144,6 +144,16 @@ export const eventsDB: EventsDB = {
 					altText: 'sparta'
 				}
 			]
+		},
+		'dc-spring': {
+			name: "DC Spring",
+			images: [
+				{ slug: 'waldorf', altText: '' },
+				{ slug: 'uconn', altText: '' },
+				{ slug: 'onsite', altText: '' },
+				{ slug: 'queso', altText: '' },
+				{ slug: 'oval', altText: '' },
+			],
 		}
 	},
 	'2024': {
