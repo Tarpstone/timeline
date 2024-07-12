@@ -57,3 +57,5 @@ finally found a good solution with the fix above + adding width to the custom qu
 TODO alt text below images, sepia color on hover, transition hover color
 
 Write about getting SEO working (just had to link to imagetools src!)
+
+https://css-tricks.com/emoji-as-a-favicon/
