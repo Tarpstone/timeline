@@ -54,8 +54,15 @@ Also went to Next JS and remembered how unloved their Image component continues 
 
 finally found a good solution with the fix above + adding width to the custom query. Then it was polaroid time.
 
-TODO alt text below images, sepia color on hover, transition hover color
-
-Write about getting SEO working (just had to link to imagetools src!)
+Write about getting SEO working (just had to link to @imagetools src!)
 
 https://css-tricks.com/emoji-as-a-favicon/
+
+### TODO alt text below images, sepia color on hover, transition hover color
+
+### Adding new images
+- Add to Apple Photos album timeline.tarpey.dev
+- Give a title in the Photos app
+- Export to PNG with no quality loss (TODO maybe later keep metadata on for location?)
+- Add to appropriate albums folder by year/eventSlug
+- Run `convert-images.sh` in the folder that needs conversion to webpack
