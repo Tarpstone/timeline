@@ -159,7 +159,7 @@ export const eventsDB: EventsDB = {
 					altText: '',
 				},
 				{
-					slug: 'arboretum',
+					slug: 'greenway',
 					altText: '',
 				},
 				{
