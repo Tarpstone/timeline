@@ -52,10 +52,10 @@ export const years: YearSummary[] = [
 	// 	year: '2022',
 	// 	summary: '',
 	// },
-	// {
-	// 	year: '2021',
-	// 	summary: '',
-	// },
+	{
+		year: '2021',
+		summary: 'Massachusetts, dodging COVID',
+	},
 	// {
 	// 	year: '2020',
 	// 	summary: '',
@@ -129,6 +129,105 @@ export const eventsDB: EventsDB = {
 				}
 			]
 		}
+	},
+	'2021': {
+		'mass-summer': {
+			name: 'MA Summer',
+			images: [
+				{
+					slug: 'elevator',
+					altText: '',
+				},
+				{
+					slug: 'carrot-cake',
+					altText: '',
+				},
+				{
+					slug: '93',
+					altText: '',
+				},
+				{
+					slug: 'lolita',
+					altText: '',
+				},
+				{
+					slug: 'seaport',
+					altText: '',
+				},
+				{
+					slug: 'eagle',
+					altText: '',
+				},
+				{
+					slug: 'arboretum',
+					altText: '',
+				},
+				{
+					slug: 'arch',
+					altText: '',
+				},
+				{
+					slug: 'wharf',
+					altText: '',
+				},
+				{
+					slug: 'bunny',
+					altText: '',
+				},
+				{
+					slug: 'onramp',
+					altText: '',
+				},
+				{
+					slug: 'garden',
+					altText: '',
+				},
+				{
+					slug: 'owo',
+					altText: '',
+				},
+				{
+					slug: 'skyline',
+					altText: '',
+				},
+				{
+					slug: 'lakeside',
+					altText: '',
+				},
+				{
+					slug: 'reception',
+					altText: '',
+				},
+				{
+					slug: 'double',
+					altText: '',
+				},
+				{
+					slug: 'panorama',
+					altText: '',
+				},
+				{
+					slug: 'cover',
+					altText: '',
+				},
+				{
+					slug: 'mountain',
+					altText: '',
+				},
+				{
+					slug: 'chipmunk',
+					altText: '',
+				},
+				{
+					slug: 'coffee',
+					altText: '',
+				},
+				{
+					slug: 'huevos',
+					altText: '',
+				},
+			]
+		},
 	},
 	'2023': {
 		'pax-east': {
