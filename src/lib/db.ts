@@ -41,7 +41,7 @@ export interface EnhancedImageData {
 export const years: YearSummary[] = [
 	{
 		year: '2024',
-		summary: "PAX East, Dreamhack Dallas, here's some more words"
+		summary: "PAX East, Dreamhack Dallas, Denver"
 	},
 	{
 		year: '2023',
@@ -300,7 +300,269 @@ export const eventsDB: EventsDB = {
 						'The winning moment from IEM Dallas 2024. Members of G2 Esports stand behind their trophy on-stage after defeating Vitality 2-1 in the best-of-3 series. Their faces are displayed prominently on the big screen above the stage, while smaller yellow pyrotechnics fire off on each side.'
 				}
 			]
-		}
+		},
+		'denver': {
+			slug: 'denver',
+			name: 'Denver',
+			images: [
+				{
+					slug: 'i64',
+					altText: 'i64'
+				},
+				{
+					slug: 'wv',
+					altText: 'wv'
+				},
+				{
+					slug: 'louisville',
+					altText: 'louisville'
+				},
+				{
+					slug: 'arch',
+					altText: 'arch'
+				},
+				{
+					slug: 'baseball',
+					altText: 'baseball'
+				},
+				{
+					slug: 'billboard',
+					altText: 'billboard'
+				},
+				{
+					slug: 'windfarm',
+					altText: 'windfarm'
+				},
+				{
+					slug: 'golden',
+					altText: 'golden'
+				},
+				{
+					slug: 'elmo',
+					altText: 'elmo'
+				},
+				{
+					slug: 'geological',
+					altText: 'geological'
+				},
+				{
+					slug: 'spirits',
+					altText: 'spirits'
+				},
+				{
+					slug: 'altar',
+					altText: 'altar'
+				},
+				{
+					slug: 'cafe',
+					altText: 'cafe'
+				},
+				{
+					slug: 'lookout',
+					altText: 'lookout'
+				},
+				{
+					slug: 'ashe',
+					altText: 'ashe'
+				},
+				{
+					slug: 'carrygun',
+					altText: 'carrygun'
+				},
+				{
+					slug: 'grave',
+					altText: 'grave'
+				},
+				{
+					slug: 'hike',
+					altText: 'hike'
+				},
+				{
+					slug: 'owl',
+					altText: 'owl'
+				},
+				{
+					slug: 'fusion',
+					altText: 'fusion'
+				},
+				{
+					slug: 'salmon',
+					altText: 'salmon'
+				},
+				{
+					slug: 'mansion',
+					altText: 'mansion'
+				},
+				{
+					slug: 'elk',
+					altText: 'elk'
+				},
+				{
+					slug: 'crabapple',
+					altText: 'crabapple'
+				},
+				{
+					slug: 'stanley',
+					altText: 'stanley'
+				},
+				{
+					slug: 'no-fishing',
+					altText: 'no-fishing'
+				},
+				{
+					slug: 'hyrule',
+					altText: 'hyrule'
+				},
+				{
+					slug: 'lovers',
+					altText: 'lovers'
+				},
+				{
+					slug: 'lake',
+					altText: 'lake'
+				},
+				{
+					slug: 'vista',
+					altText: 'vista'
+				},
+				{
+					slug: 'oatmeal',
+					altText: 'oatmeal'
+				},
+				{
+					slug: 'burrito',
+					altText: 'burrito'
+				},
+				{
+					slug: 'symphyotrichum',
+					altText: 'symphyotrichum'
+				},
+				{
+					slug: 'trail',
+					altText: 'trail'
+				},
+				{
+					slug: 'cactus',
+					altText: 'cactus'
+				},
+				{
+					slug: 'snake',
+					altText: 'snake'
+				},
+				{
+					slug: 'crossing',
+					altText: 'crossing'
+				},
+				{
+					slug: 'blondie',
+					altText: 'blondie'
+				},
+				{
+					slug: 'downtown',
+					altText: 'downtown'
+				},
+				{
+					slug: 'forest',
+					altText: 'forest'
+				},
+				{
+					slug: 'haywire',
+					altText: 'haywire'
+				},
+				{
+					slug: 'office',
+					altText: 'office'
+				},
+				{
+					slug: 'worlds',
+					altText: 'worlds'
+				},
+				{
+					slug: 'eyes',
+					altText: 'eyes'
+				},
+				{
+					slug: 'memento-mori',
+					altText: 'memento-mori'
+				},
+				{
+					slug: 'artifact',
+					altText: 'artifact'
+				},
+				{
+					slug: 'twisted',
+					altText: 'twisted'
+				},
+				{
+					slug: 'hags',
+					altText: 'hags'
+				},
+				{
+					slug: 'kingdom',
+					altText: 'kingdom'
+				},
+				{
+					slug: 'streets',
+					altText: 'streets'
+				},
+				{
+					slug: 'alley',
+					altText: 'alley'
+				},
+				{
+					slug: 'leaving',
+					altText: 'leaving'
+				},
+				{
+					slug: 'matcha',
+					altText: 'matcha'
+				},
+				{
+					slug: 'sandwich',
+					altText: 'sandwich'
+				},
+				{
+					slug: 'prairie',
+					altText: 'prairie'
+				},
+				{
+					slug: 'bouquet',
+					altText: 'bouquet'
+				},
+				{
+					slug: 'chillin',
+					altText: 'chillin'
+				},
+				{
+					slug: 'genji',
+					altText: 'genji'
+				},
+				{
+					slug: 'burgers',
+					altText: 'burgers'
+				},
+				{
+					slug: 'library',
+					altText: 'library'
+				},
+				{
+					slug: 'bonsai',
+					altText: 'bonsai'
+				},
+				{
+					slug: 'travel',
+					altText: 'travel'
+				},
+				{
+					slug: 'yall',
+					altText: 'yall'
+				},
+				{
+					slug: 'refuel',
+					altText: 'refuel'
+				}
+			]
+		},
 	}
 };
 
