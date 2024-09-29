@@ -61,6 +61,7 @@ https://css-tricks.com/emoji-as-a-favicon/
 ### TODO alt text below images, sepia color on hover, transition hover color
 
 ### Adding new images
+
 - Add to Apple Photos album timeline.tarpey.dev
 - Give a title in the Photos app
 - Export to PNG with no quality loss (TODO maybe later keep metadata on for location?)
