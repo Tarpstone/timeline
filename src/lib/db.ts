@@ -307,111 +307,111 @@ export const eventsDB: EventsDB = {
 			images: [
 				{
 					slug: 'i64',
-					altText: 'i64'
+					altText: 'View from the driver\'s seat on Interstate 64 westbound near Lexington, Virginia. Trees line each side of the road, and the car in front looks like it\'s almost touching the low-hanging mountain clouds.'
 				},
 				{
 					slug: 'wv',
-					altText: 'wv'
+					altText: 'View from the driver\'s seat on Interstate 64 westbound at the Welcome sign for West Virginia. A small camper is underneath the sign. The speed limit sign says 70 miles per hour.'
 				},
 				{
 					slug: 'louisville',
-					altText: 'louisville'
+					altText: 'View from the driver\'s seat on Interstate 64 westbound , with a blurred Louisville skyline in the background. The bottom third of the photo is the dashboard of the Mazda.'
 				},
 				{
 					slug: 'arch',
-					altText: 'arch'
+					altText: 'View of the St. Louis Arch from the driver\'s seat on Interstate 70 westbound. A US Bank skyscraper is visible underneath the arch.'
 				},
 				{
 					slug: 'baseball',
-					altText: 'baseball'
+					altText: 'Busch Stadium, home of the St. Louis Cardinals professional baseball team, viewed from the driver\'s seat on Interstate 70 westbound.'
 				},
 				{
 					slug: 'billboard',
-					altText: 'billboard'
+					altText: 'A highway billboard that reads "IS ANYONE EVEN READING THIS?", viewed from the driver\'s seat on Interstate 70 westbound. It\'s an ad for a local Dairy Queen.'
 				},
 				{
 					slug: 'windfarm',
-					altText: 'windfarm'
+					altText: 'View from the driver\'s seat on Interstate 70 westbound near Beverly, Kansas. The sun has set and wispy clouds line the horizon. The shillouette of a wind farm is visible (about a dozen turbines).'
 				},
 				{
 					slug: 'golden',
-					altText: 'golden'
+					altText: 'View from the driver\'s seat in downtown Golden, Colorado. The 12th Street stoplight is red. An arching sign reads "Howdy Folks! WELCOME TO GOLDEN, WHERE THE WEST LIVES". Small two-story buildings in earthy tones line each side of the street, with cars parked in front and pedestrians walking by.'
 				},
 				{
 					slug: 'elmo',
-					altText: 'elmo'
+					altText: 'A toy Volkswagen bus in the Colorado Mills mall with a peace sign on the front. Elmo is driving and a polar bear is in the passenger seat.'
 				},
 				{
 					slug: 'geological',
-					altText: 'geological'
+					altText: 'A huge, layered rock formation near Red Rocks Trail in Golden, Colorado. Cars can be seen traveling the highway in the bottom portion of the image.'
 				},
 				{
 					slug: 'spirits',
-					altText: 'spirits'
+					altText: 'Framed images of family members who are no longer with us, on a white wooden stand with metal drawer handles. The caption in front reads "we know you would be here today, if heaven wasn\'t so far away".'
 				},
 				{
 					slug: 'altar',
-					altText: 'altar'
+					altText: 'A small garden area, illuminated by string lights running from locations outside the image up to a tree above the wedding altar. There\'s a wooden barrel underneath the altar, and the ground is a mixture of small pebble paths and a grassy area.'
 				},
 				{
 					slug: 'cafe',
-					altText: 'cafe'
+					altText: 'Mike Tarpey dressed in a University of Connecticut hat and a light gray Buc-ee\'s hoodie, drinking an iced vanilla latte and eating a turkey + egg breakfast sandwich on grilled sourdough, with a cup of vinegar-based hot sauce.'
 				},
 				{
 					slug: 'lookout',
-					altText: 'lookout'
+					altText: 'Panoramic view from the parking lot of the Buffalo Bill Museum parking lot, looking toward the Rocky Mountains underneath a partly cloudy blue sky. Trees are interspersed in the foreground, with a winding road down the mountain.'
 				},
 				{
 					slug: 'ashe',
-					altText: 'ashe'
+					altText: 'Sign from the Buffalo Bill Museum that reads "BUFFALO BILL\'S WILD WEST. CONGRESS, ROUGH RIDERS OF THE WORLD. MISS ANNIE OAKLEY, THE PEERLESS LADY WING-SHOT." Annie Oakley is holding a rifle in her right hand, propped up on the prairie, with other Wild West participants taking shots in the background behind her.'
 				},
 				{
 					slug: 'carrygun',
-					altText: 'carrygun'
+					altText: 'Photograph in the Buffalo Bill Museum of a man shooting a rifle behind him by leaning back at a 90 degree angle and craning his neck, basically forming an upside-down J shape with his body.'
 				},
 				{
 					slug: 'grave',
-					altText: 'grave'
+					altText: 'Wide-angle photograph taken from behind Buffalo Bill\'s grave site. The US flag and Colorado state flags fly on the same pole near the top of the image. A few tourists are observing various spots around the grave.'
 				},
 				{
 					slug: 'hike',
-					altText: 'hike'
+					altText: 'Looking down at our hiking shoes on Lookout Mountain in Colorado. One pair is tan with bright red laces, and the other pair is gray with white accents.'
 				},
 				{
 					slug: 'owl',
-					altText: 'owl'
+					altText: 'A stuffed Great Horned Owl looking directly into the camera with yellow eyes, located in the Lookout Mountain Nature Preserve.'
 				},
 				{
 					slug: 'fusion',
-					altText: 'fusion'
+					altText: 'Closeup of a square fried wonton appetizer topped with chopped corned beef, sauerkraut, thousand island dressing, and greens.'
 				},
 				{
 					slug: 'salmon',
-					altText: 'salmon'
+					altText: 'Closeup of a pan seared, bourbon teriyaki salmon cooked to medium temperature, topped with greens and sitting on a mountain of colcannon risotto.'
 				},
 				{
 					slug: 'mansion',
-					altText: 'mansion'
+					altText: 'Picture of the doll house located in the Stanley Hotel in Estes Park, Colorado. It was featured in The Shining.'
 				},
 				{
 					slug: 'elk',
-					altText: 'elk'
+					altText: 'Statue of an elk in the garden located behind the Stanley Hotel.'
 				},
 				{
 					slug: 'crabapple',
-					altText: 'crabapple'
+					altText: 'Closeup of some bright red crabapples hanging from a tree in the garden located behind the Stanley Hotel.'
 				},
 				{
 					slug: 'stanley',
-					altText: 'stanley'
+					altText: 'View from the hedge maze in front of the Stanley Hotel. A statue of F.O. Stanley is in the foreground with a quote from 1928. The Stanley Hotel is in the background.'
 				},
 				{
 					slug: 'no-fishing',
-					altText: 'no-fishing'
+					altText: 'A sign that reads "NO FISHING ALLOWED. THE FISH THANK YOU. Stanley Village" mounted on a pole in front of a small pond surrounded by rocks.'
 				},
 				{
 					slug: 'hyrule',
-					altText: 'hyrule'
+					altText: 'A replica of a Hylian Shield hanging on a natural wood wall in a local sword shop in Estes Park. It\'s flanked on either side with Master Sword replicas (one blue, one black).'
 				},
 				{
 					slug: 'lovers',
