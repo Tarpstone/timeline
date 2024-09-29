@@ -37,7 +37,10 @@
 </script>
 
 <svelte:head>
+	<title>{fullPageTitle}</title>
 	<link rel="canonical" href={fullPageUrl} />
+	<meta name="author" content="Mike Tarpey" />
+	<meta name="description" content={basePageDescription} />
 	<meta property="og:title" content={fullPageTitle} />
 	<meta property="og:site_name" content={fullPageTitle} />
 	<meta property="og:description" content={basePageDescription} />
