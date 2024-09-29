@@ -415,151 +415,151 @@ export const eventsDB: EventsDB = {
 				},
 				{
 					slug: 'lovers',
-					altText: 'lovers'
+					altText: 'A primarily black tapestry hanging on the wall of a small indoor mall in Estes Park, Colorado. It reads "THE LOVERS" and depicts two white skeletons kissing, with arms wrapped around each other, bordered by golden flowers and the moon.'
 				},
 				{
 					slug: 'lake',
-					altText: 'lake'
+					altText: 'View of Lake Estes looking in the southern directions. The water is flat and hardly rippling, the sky is blue with some stretches of think white clouds, and mountains extend far into the distance.'
 				},
 				{
 					slug: 'vista',
-					altText: 'vista'
+					altText: 'View looking west from Flatirons Vista in Colorado. There is prairie grass in the foreground, followed by some hills, and then mountains in the background. The sky is a yellowish blue at sunset, and the clouds are pinkish to orange.'
 				},
 				{
 					slug: 'oatmeal',
-					altText: 'oatmeal'
+					altText: 'A blue cup of oatmeal topped with dried fruits, nuts, and coconut shavings. The consumer is wearing a light blue Killua hoodie from Hunter X Hunter.'
 				},
 				{
 					slug: 'burrito',
-					altText: 'burrito'
+					altText: 'A large grilled breakfast burrito, cut in half on a diagonal and plated one half leaning on the other. It is stuffed with eggs, cheese, potatoes, onions and peppers, with a cup of somewhat spicy salsa on the site. (It was delicious every time.)'
 				},
 				{
 					slug: 'symphyotrichum',
-					altText: 'symphyotrichum'
+					altText: 'Macro shot of a cluster of flowers on the Red Rocks Trail in Colorado. About half have wilted for the season, but the other half live on and are still bright.'
 				},
 				{
 					slug: 'trail',
-					altText: 'trail'
+					altText: 'A wooden sign at the intersection of Dalton Point and Red Rocks Trail in Colorado. The red dirt trail is in the foreground and slopes steeply down. Into the distance, there\'s a large mountain covered by 50% trees and 50% grass. The sky is completely blue.'
 				},
 				{
 					slug: 'cactus',
-					altText: 'cactus'
+					altText: 'Closeup of a small cactus on the Red Rocks Trail in Colorado (specifically Dalton Point). Beau is standing in the background, blurred, looking out over the suburbs.'
 				},
 				{
 					slug: 'snake',
-					altText: 'snake'
+					altText: 'A small snake scurries across the red dirt of the Red Rocks Trail in Colorado. It is white with dark spots in a beautiful diamond pattern.'
 				},
 				{
 					slug: 'crossing',
-					altText: 'crossing'
+					altText: 'View from the trail at the entrance of Matthews/Winters Park, looking north toward Interstate 70. At least 20 street signs are visible.'
 				},
 				{
 					slug: 'blondie',
-					altText: 'blondie'
+					altText: 'Overhead closeup of the blondie dessert from the Hungry Goat restaurant in Morrison, Colorado. Three puffs of cream are equally spaced on top of the rectangular blondie, with a chocolate cookie layer on top and sliced strawberries on opposite ends of the oval-shaped white plate. It\'s also drizzled with a chocolate sauce.'
 				},
 				{
 					slug: 'downtown',
-					altText: 'downtown'
+					altText: 'View from outside the Meow Wolf exhibit in downtown Denver, looking toward the neon "YOU ARE HERE" sign with Mile High Stadium in the background, where the Denver Broncos play home football games in the NFL. It is twilight and the sky is dark blue with an orange tint. A highway overpass is visible in the top right corner of the image.'
 				},
 				{
 					slug: 'forest',
-					altText: 'forest'
+					altText: 'A fantastic forest landscape inside the Meow Wolf exhibit in downtown Denver. Everything is bathed in a purple light, with some orange decorative mushrooms and imaginary creatures.'
 				},
 				{
 					slug: 'haywire',
-					altText: 'haywire'
+					altText: 'An alien world exhibit inside the Meow Wolf in downtown Denver. The entrance is somewhat tilted as if the building was falling over.'
 				},
 				{
 					slug: 'office',
-					altText: 'office'
+					altText: 'An office exhibit inside the Meow Wolf in downtown Denver. The lighting is dim, and an old Gateway computer resting on a wooden desk displays webpages from the imaginary convergence of worlds that the exhibit is based on. There are huge piles of books on either side of the desk, and letters from various fictional characters line the wall.'
 				},
 				{
 					slug: 'worlds',
-					altText: 'worlds'
+					altText: 'Closeup of the alien world exhibit inside the Meow Wolf in downtown Denver. Each white stone pillar has some see-through panes; inside each pillar is a miniature world created from various everyday objects. from flowers and rocks to sea creatures and painted fingernails.'
 				},
 				{
 					slug: 'eyes',
-					altText: 'eyes'
+					altText: 'A multicolored exhibit inside the Meow Wolf in downtown Denver. A globe covered in human eyeballs is in the center of the ceiling, with inflatable pillars branching out and connecting to the walls. Various natural elements (vines, lightning bolts, water droplets) are painted on the walls.'
 				},
 				{
 					slug: 'memento-mori',
-					altText: 'memento-mori'
+					altText: 'A primarily black-and-white exhibit inside the Meow Wolf in downtown Denver disguises the entrance to the restrooms. The biggest splash of color in the image is a neon sign that reads "memento mori" in a handwritten font.'
 				},
 				{
 					slug: 'artifact',
-					altText: 'artifact'
+					altText: 'A small, transparent globe inside the Meow Wolf in downtown Denver is lit up on the inside in various colors. In addition to the lights, there are plant clippings and other miscellaneous objects inside like a lighter from a Love\'s truck stop. The effect is as if they are frozen in amber.'
 				},
 				{
 					slug: 'twisted',
-					altText: 'twisted'
+					altText: 'Mike Tarpey traverses a glowing magenta rectangular hallway inside the Meow Wolf in downtown Denver. It twists a full 90 degrees in incremental slices.'
 				},
 				{
 					slug: 'hags',
-					altText: 'hags'
+					altText: 'A small window exhibit inside the Meow Wolf in downtown Denver. A futuristic humanoid rat is dressed in biker clothing with a neon green mohawk. He\'s standing on top of a pile of retro junk, including a Nintendo Game Boy, an energy drink can, and a New York City MTA MetroCard, among many other things.'
 				},
 				{
 					slug: 'kingdom',
-					altText: 'kingdom'
+					altText: 'A feature exhibit of the Meow Wolf in downtown Denver. An entire miniature castle is made of stained glass in a plethora of colors. Lasers pointed upward are creating various wireframe designs on the ceiling.'
 				},
 				{
 					slug: 'streets',
-					altText: 'streets'
+					altText: 'A feature exhibit of the Meow Wolf in downtown Denver. You find yourself looking at a futuristic city street, complete with fictional shops topped with neon light logos. A fake convenience store painted in teal sits behind a van on the right side, and there are lamp posts and a crosswalk.'
 				},
 				{
 					slug: 'alley',
-					altText: 'alley'
+					altText: 'A back alley exhibit inside the Meow Wolf in downtown Denver. A staircase is locked behind a chain link fence; the door is padlocked. The stairs are lit in various hues including blue, purple and red.'
 				},
 				{
 					slug: 'leaving',
-					altText: 'leaving'
+					altText: 'Mike Tarpey sits on a bright red chair inside the Origin Red Rocks hotel in Golden, Colorado. He is leaning forward and contemplative before the journey back home to Virginia.'
 				},
 				{
 					slug: 'matcha',
-					altText: 'matcha'
+					altText: 'Closeup of a foamy-looking matcha tea, a cool shade of green inside a black cup with a handle.'
 				},
 				{
 					slug: 'sandwich',
-					altText: 'sandwich'
+					altText: 'Closeup of a turkey sandwich with cheese, greens, apple slice, and basil mayo. The sandwich is sliced in half, with one half stacked on the toher. There is a long wooden pick holding each half together between two slices of grilled bread.'
 				},
 				{
 					slug: 'prairie',
-					altText: 'prairie'
+					altText: 'View from the driver\'s seat on Interstate 76 eastbound near Roggen, Colorado. The road stretches straight all the way into the cloudy horizon, with prairie grass on each side of the road.'
 				},
 				{
 					slug: 'bouquet',
-					altText: 'bouquet'
+					altText: 'A fabric bird is on display in a local coffee shop in Clive, Iowa. It was crafted from various cutout fabric shapes: it is pink and a bit chubby, with long brown legs and purple antennae. It is also holding a bouquet of blue and yellow fabric flowers.'
 				},
 				{
 					slug: 'chillin',
-					altText: 'chillin'
+					altText: 'View from the driver\'s seat on State Road 30 eastbound in Cedar Rapids, Iowa. The water tower has the city name in big capital serif letters. There is light traffic on the westbound side of the divided highway.'
 				},
 				{
 					slug: 'genji',
-					altText: 'genji'
+					altText: 'View from the driver\'s seat in a Wisconsin driveway. Genji, a large fluffy white dog, stares at the photographer from behind the glass screen door of his house.'
 				},
 				{
 					slug: 'burgers',
-					altText: 'burgers'
+					altText: 'Mike Tarpey eats burgers and appetizers at Captain Mike\'s restaurant with his partner Beau and the Spragues from Wisconsin. The wall is decorated with naval trinkets like a wood-carved sailboat and a gold framed photo of Captain Mike, presumably.'
 				},
 				{
 					slug: 'library',
-					altText: 'library'
+					altText: 'The Spragues check out a mini library box behind a large tree in downtown Kenosha, Wisconsin. It is nighttime and the scene is lit by bright street lamps.'
 				},
 				{
 					slug: 'bonsai',
-					altText: 'bonsai'
+					altText: 'A bonsai made from Lego blocks sits on a wooden stand in a coffee shop in northwest Indianapolis. A crochet snail with a pink shell and light tan body is propped up on the side of the bonsai, and various plants are naturally lit in the blurred background.'
 				},
 				{
 					slug: 'travel',
-					altText: 'travel'
+					altText: 'View from the driver\'s seat on Interstate 74 eastbound near Indianapolis. The blue highway sign reads "CURRENT TRAVEL TIME TO INTERSTATE 70, 7 MILES, 7 MINUTES. INTERSTATE 69, 14 MILES, 33 MINUTES." There is an overpass behind the sign carrying traffic on Arlington Ave.'
 				},
 				{
 					slug: 'yall',
-					altText: 'yall'
+					altText: 'View from the driver\'s seat on Interstate 75 southbound near Florence, Ohio. A large red and white striped water tower reads "FLORENCE Y\'ALL" under an overcast gray sky.'
 				},
 				{
 					slug: 'refuel',
-					altText: 'refuel'
+					altText: 'Mike Tarpey takes a selfie near the end of the road trip in front of the large Buc-ee\'s sign that overlooks Interstate 75 in Richmond, Kentucky.'
 				}
 			]
 		},
