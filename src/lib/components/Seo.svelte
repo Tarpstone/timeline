@@ -29,7 +29,7 @@
 		fullPageUrl = `${basePageUrl}/${urlOverride}`;
 	}
 	// fallback to default SEO if something is messed up
-	const finalImageUrl = `${imageUrl ? imageUrl : imageUrl}`;
+	const finalImageUrl = `${imageUrl ? imageUrl : getImageBuildPaths('1992', 'life', 'van').src1600}`;
 	const defaultAltText =
 		'Cindy Tarpey in the early 90s, crouched down on the front lawn of her house in Central Florida, holding her toddler aged son Mike Tarpey (owner of this website). The shadows indicate high noon, and their blocky brown Chrysler minivan is in the background.';
 	// imageUrl is the condition here to ensure that if an image is missing alt text, it just won't get any
