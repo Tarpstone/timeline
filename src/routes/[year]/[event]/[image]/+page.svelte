@@ -10,7 +10,7 @@
 	year={data.imageData.year}
 	eventSlug={data.imageData.eventSlug}
 	imageSlug={data.imageData.imageSlug}
-	imageUrl={data.imageData.src}
+	imageUrl={data.imageData.src1600}
 	imageAltText={data.imageData.altText}
 />
 <main>

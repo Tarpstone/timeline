@@ -9,7 +9,7 @@
 <Seo
 	year={data.year}
 	eventSlug={data.event}
-	imageUrl={data.images[data.images.length - 1].src}
+	imageUrl={data.images[data.images.length - 1].src1600}
 	imageAltText={data.images[data.images.length - 1].altText}
 />
 <main>
