@@ -8,7 +8,7 @@
 
 <Seo
 	year={data.year}
-	imageUrl={data.images[data.images.length - 1].enhancedSrc.img.src}
+	imageUrl={data.images[data.images.length - 1].src}
 	imageAltText={data.images[data.images.length - 1].altText}
 />
 <main>

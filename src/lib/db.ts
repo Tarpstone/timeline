@@ -2,7 +2,7 @@
  * Schema and data for the site.
  */
 
-import { getFull, type Image } from './images';
+import { getImageImport, type Image } from './images';
 
 // main SEO image
 export const mainImageAltText =
@@ -28,13 +28,22 @@ interface EventImage {
 	altText: string;
 }
 
-export interface EnhancedImageData {
+export interface SrcSet {
+	src: string;
+	src400: string;
+	src800: string;
+	src1600: string;
+	srcset: string;
+	srcsetHero: string;
+}
+
+export interface EnhancedImageData extends SrcSet {
 	year: string;
 	eventSlug: string;
 	eventName: string;
 	imageSlug: string;
 	href: string;
-	enhancedSrc: Image;
+	enhancedSrc?: Image;
 	altText: string;
 }
 
@@ -48,10 +57,6 @@ export const years: YearSummary[] = [
 		summary:
 			'PAX East, other stuff, just listing words here to test how the page looks really, sup people'
 	},
-	// {
-	// 	year: '2022',
-	// 	summary: '',
-	// },
 	{
 		year: '2021',
 		summary: 'Massachusetts, dodging COVID'
@@ -301,7 +306,7 @@ export const eventsDB: EventsDB = {
 				}
 			]
 		},
-		denver: {
+		'denver': {
 			slug: 'denver',
 			name: 'Denver',
 			images: [
@@ -697,23 +702,33 @@ export function transformToEnhancedImageData(
 	image: EventImage
 ): EnhancedImageData {
 	const eventSlugNameMap = getEventNamesBySlugForYear(year);
+	const srcSet = getImageBuildPaths(year, eventSlug, image.slug);
 	return {
 		year: year,
 		eventSlug: eventSlug,
 		eventName: eventSlugNameMap[eventSlug],
 		imageSlug: image.slug,
 		href: `/${year}/${eventSlug}/${image.slug}`,
-		enhancedSrc: getFull(`/src/lib/albums/${year}/${eventSlug}/${image.slug}.webp`),
-		altText: image.altText
+		altText: image.altText,
+		...srcSet
 	};
 }
 
 /**
- * Get a direct link to the build URL of a certain image.
+ * Get a direct link to the build URLs of a certain image.
  * Useful for SEO (we need the built image file which includes
  * an optimization hash that changes every build).
  */
-export function getImageBuildPath(year: string, eventSlug: string, imageSlug: string): string {
-	const enhancedSrc = getFull(`/src/lib/albums/${year}/${eventSlug}/${imageSlug}.webp`);
-	return enhancedSrc.img.src;
+export function getImageBuildPaths(year: string, eventSlug: string, imageSlug: string): SrcSet {
+	const src400 = getImageImport(`/src/lib/albums/${year}/${eventSlug}/${imageSlug}-400w.webp`);
+	const src800 = getImageImport(`/src/lib/albums/${year}/${eventSlug}/${imageSlug}-800w.webp`);
+	const src1600 = getImageImport(`/src/lib/albums/${year}/${eventSlug}/${imageSlug}-1600w.webp`);
+	return {
+		src: src400,
+		src400: src400,
+		src800: src800,
+		src1600: src1600,
+		srcset: `${src400} 1x, ${src800} 2x`,
+		srcsetHero: `${src800} 1x, ${src1600} 2x`,
+	};
 }

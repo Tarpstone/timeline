@@ -16,12 +16,16 @@
 		<span class="event-name">{polaroidName}</span>
 	</div>
 	<div class="img-container">
-		<enhanced:img
+		<img class="album-grid-img"
+			src={image.src}
+			srcset={heroImage ? image.srcsetHero : image.srcset}
+			alt={image.altText}
+		/>
+		<!-- <enhanced:img
 			class="album-grid-img"
 			src={image.enhancedSrc}
 			alt={image.altText}
-			sizes={heroImage ? 'max(800px, 100vw)' : 'max(400px, 50vw)'}
-		/>
+		/> -->
 	</div>
 </PolaroidWrapper>
 
