@@ -18,10 +18,11 @@
 	}
 	if (year && eventSlug) {
 		fullPageUrl = `${basePageUrl}/${year}/${eventSlug}`;
-		fullPageTitle = `${basePageTitle} / ${eventSlug}`;
+		fullPageTitle = `${basePageTitle} / ${year} / ${eventSlug}`;
 	}
 	if (year && eventSlug && imageSlug) {
 		fullPageUrl = `${basePageUrl}/${year}/${eventSlug}/${imageSlug}`;
+		// at this level of specificity, just use the image name
 		fullPageTitle = `${basePageTitle} / ${imageSlug}`;
 	}
 	// manual override for url
