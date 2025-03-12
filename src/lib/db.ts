@@ -733,7 +733,7 @@ export const eventsDB: EventsDB = {
 				{ slug: 'accusations', altText: '' },
 				{ slug: 'pandora', altText: '' },
 				{ slug: 'candid', altText: '' },
-				{ slug: 'achievement', altText: '' },
+				{ slug: 'achievement', altText: "A Hidden Mickey located in the queue for the 'It's Tough to be a Bug!' show at Animal Kingdom in Disney World. Fallen leaves outline the shape of the classic Mickey Mouse logo: two circular ears positioned at the top-left and top-right of a larger circular head in the middle." },
 				{ slug: 'main-event', altText: '' },
 				{ slug: 'small-world', altText: '' },
 				{ slug: 'leaving', altText: '' },
