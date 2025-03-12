@@ -19,6 +19,7 @@ interface EventsDB {
 
 interface YearEvent {
 	slug?: string;
+	coverSlug: string;
 	name: string;
 	images: EventImage[];
 }
@@ -107,6 +108,7 @@ export const eventsDB: EventsDB = {
 	'2012': {
 		'coke-600': {
 			name: 'Coke 600',
+			coverSlug: 'rockstar',
 			images: [
 				{
 					slug: 'pizza',
@@ -142,6 +144,7 @@ export const eventsDB: EventsDB = {
 	'2021': {
 		'mass-summer': {
 			name: 'MA Summer',
+			coverSlug: 'cover',
 			images: [
 				{
 					slug: 'elevator',
@@ -242,6 +245,7 @@ export const eventsDB: EventsDB = {
 		'pax-east': {
 			slug: 'pax-east',
 			name: 'PAX East',
+			coverSlug: 'sparta',
 			images: [
 				{
 					slug: 'cape-cod',
@@ -255,6 +259,7 @@ export const eventsDB: EventsDB = {
 		},
 		'dc-spring': {
 			name: 'DC Spring',
+			coverSlug: 'waldorf',
 			images: [
 				{ slug: 'waldorf', altText: '' },
 				{ slug: 'uconn', altText: '' },
@@ -267,6 +272,7 @@ export const eventsDB: EventsDB = {
 	'2024': {
 		'pax-east': {
 			slug: 'pax-east',
+			coverSlug: 'baby-girl',
 			name: 'PAX East',
 			images: [
 				{
@@ -281,6 +287,7 @@ export const eventsDB: EventsDB = {
 		},
 		'dreamhack-dallas': {
 			slug: 'dreamhack-dallas',
+			coverSlug: 'gstew',
 			name: 'Dreamhack Dallas',
 			images: [
 				{
@@ -312,6 +319,7 @@ export const eventsDB: EventsDB = {
 		},
 		'denver': {
 			slug: 'denver',
+			coverSlug: 'cactus',
 			name: 'Denver',
 			images: [
 				{
@@ -639,6 +647,7 @@ export const eventsDB: EventsDB = {
 	'2025': {
 		'disney': {
 			slug: 'disney',
+			coverSlug: 'achievement',
 			name: 'Disney World',
 			images: [
 				{ slug: 'no-parking', altText: '' },
@@ -778,12 +787,14 @@ export function getEventNamesBySlugForYear(year: string): Record<string, string>
 }
 
 /**
- * Return the last listed image for a given event,
- * otherwise known as the "key image".
+ * Return the SEO cover image for a given event.
  */
 export function getEventKeyImage(year: string, eventSlug: string): EnhancedImageData {
+	const coverSlug = eventsDB[year][eventSlug]['coverSlug'];
 	const enhancedImageData = getYearEventImages(year, eventSlug);
-	return enhancedImageData[enhancedImageData.length - 1];
+	// look for the requested cover, just return the last image in the set
+	// if we can't find it for some reason (typo?)
+	return enhancedImageData.find((image) => image.imageSlug === coverSlug) ?? enhancedImageData[enhancedImageData.length - 1];
 }
 
 /**
