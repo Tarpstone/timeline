@@ -3,14 +3,16 @@
 	import PolaroidGrid from '$lib/components/PolaroidGrid.svelte';
 	import NavHeader from '$lib/components/NavHeader.svelte';
 	import Seo from '$lib/components/Seo.svelte';
+	import { getEventKeyImage } from '$lib/db';
 	export let data;
+	const coverImage = getEventKeyImage(data.year, data.event);
 </script>
 
 <Seo
 	year={data.year}
 	eventSlug={data.event}
-	imageUrl={data.images[data.images.length - 1].src1600}
-	imageAltText={data.images[data.images.length - 1].altText}
+	imageUrl={coverImage.src1600}
+	imageAltText={coverImage.altText}
 />
 <main>
 	<section>

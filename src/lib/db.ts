@@ -790,11 +790,18 @@ export function getEventNamesBySlugForYear(year: string): Record<string, string>
  * Return the SEO cover image for a given event.
  */
 export function getEventKeyImage(year: string, eventSlug: string): EnhancedImageData {
-	const coverSlug = eventsDB[year][eventSlug]['coverSlug'];
+	const coverSlug = getEventCoverSlug(year, eventSlug);
 	const enhancedImageData = getYearEventImages(year, eventSlug);
 	// look for the requested cover, just return the last image in the set
 	// if we can't find it for some reason (typo?)
 	return enhancedImageData.find((image) => image.imageSlug === coverSlug) ?? enhancedImageData[enhancedImageData.length - 1];
+}
+
+/**
+ * Return the SEO cover image slug for a given event.
+ */
+export function getEventCoverSlug(year: string, eventSlug: string): string {
+	return eventsDB[year][eventSlug]['coverSlug'];
 }
 
 /**
