@@ -50,9 +50,6 @@
 	<meta property="og:image:alt" content={finalAltText} />
 	<meta property="og:type" content="website" />
 	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:site:id" content="16149065" />
-	<meta name="twitter:creator" content="@Tarpstone" />
-	<meta name="twitter:creator:id" content="16149065" />
 	<meta property="twitter:title" content={fullPageTitle} />
 	<meta property="twitter:description" content={basePageDescription} />
 	<meta name="twitter:image" content={finalImageUrl} />
