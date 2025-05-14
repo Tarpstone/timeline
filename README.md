@@ -67,3 +67,5 @@ https://css-tricks.com/emoji-as-a-favicon/
 - Export to PNG with no quality loss (TODO maybe later keep metadata on for location?)
 - Add to appropriate albums folder by year/eventSlug
 - Run `convert-images.sh` in the folder that needs conversion to webpack
+- Add images and alt-text to db.ts, specify cover image
+- Send it
